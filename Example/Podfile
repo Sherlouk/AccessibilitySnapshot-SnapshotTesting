@@ -1,0 +1,20 @@
+use_frameworks!
+use_modular_headers!
+platform :ios, '10.0'
+
+target 'AccessibilitySnapshotDemo' do
+	pod 'Paralayout', '~> 0.9'
+
+	target 'SnapshotTests' do
+		inherit! :search_paths
+
+		# Because the subspec isn't in `master` yet we need to specify the git path here...
+		pod 'AccessibilitySnapshot/Core', :git => 'https://github.com/cashapp/AccessibilitySnapshot.git', :branch => 'core-subspec'
+
+		pod 'AccessibilitySnapshotPointfree', :path => '../AccessibilitySnapshotPointfree.podspec'
+	end
+end
+
+project 'AccessibilitySnapshot.xcodeproj'
+
+install! 'cocoapods', :disable_input_output_paths => true
