@@ -3,11 +3,26 @@ import AccessibilitySnapshot
 
 extension Snapshotting where Value == UIView, Format == UIImage {
 
+    /// Snapshots the current view with colored overlays of each accessibility element it contains, as well as an
+    /// approximation of the description that VoiceOver will read for each element.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyAccessibility` function.
     public static var accessibilityImage: Snapshotting {
         return .accessibilityImage()
     }
     
-    // SnapshotVerifyAccessibility
+    /// Snapshots the current view with colored overlays of each accessibility element it contains, as well as an
+    /// approximation of the description that VoiceOver will read for each element.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyAccessibility` function.
+    ///
+    /// - Parameter showActivationPoints: When to show indicators for elements' accessibility activation points.
+    /// Defaults to showing activation points only when they are different than the default activation point for that
+    /// element.
+    /// - Parameter useMonochromeSnapshot: Whether or not the snapshot of the `view` should be monochrome. Using a
+    /// monochrome snapshot makes it more clear where the highlighted elements are, but may make it difficult to
+    /// read certain views. Defaults to `true`.
+    /// - Parameter markerColors: The array of colours which will be chosen from when creating the overlays
     public static func accessibilityImage(
         showActivationPoints activationPointDisplayMode: ActivationPointDisplayMode = .whenOverridden,
         useMonochromeSnapshot: Bool = true,
@@ -39,7 +54,11 @@ extension Snapshotting where Value == UIView, Format == UIImage {
         
     }
     
-    // SnapshotVerify
+    /// Snapshots the current view using the specified content size category to test Dynamic Type.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerify` function.
+    ///
+    /// - Parameter contentSizeCategory: The content size category to use in the snapshot
     public static func image(
         at contentSizeCategory: UIContentSizeCategory
     ) -> Snapshotting {
@@ -50,8 +69,9 @@ extension Snapshotting where Value == UIView, Format == UIImage {
         
     }
     
-    // SnapshotVerifyWithInvertedColors
-    /// Snapshots the `view` simulating the way it will appear with Smart Invert Colors enabled.
+    /// Snapshots the current view simulating the way it will appear with Smart Invert Colors enabled.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyWithInvertedColors` function.
     @available(iOS 11, *)
     public static var imageWithSmartInvert: Snapshotting {
         
@@ -109,12 +129,26 @@ extension Snapshotting where Value == UIView, Format == UIImage {
 
 extension Snapshotting where Value == UIViewController, Format == UIImage {
     
-    // SnapshotVerifyAccessibility
+    /// Snapshots the current view with colored overlays of each accessibility element it contains, as well as an
+    /// approximation of the description that VoiceOver will read for each element.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyAccessibility` function.
     public static var accessibilityImage: Snapshotting {
         return .accessibilityImage()
     }
     
-    // SnapshotVerifyAccessibility
+    /// Snapshots the current view with colored overlays of each accessibility element it contains, as well as an
+    /// approximation of the description that VoiceOver will read for each element.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyAccessibility` function.
+    ///
+    /// - Parameter showActivationPoints: When to show indicators for elements' accessibility activation points.
+    /// Defaults to showing activation points only when they are different than the default activation point for that
+    /// element.
+    /// - Parameter useMonochromeSnapshot: Whether or not the snapshot of the `view` should be monochrome. Using a
+    /// monochrome snapshot makes it more clear where the highlighted elements are, but may make it difficult to
+    /// read certain views. Defaults to `true`.
+    /// - Parameter markerColors: The array of colours which will be chosen from when creating the overlays
     public static func accessibilityImage(
         showActivationPoints activationPointDisplayMode: ActivationPointDisplayMode = .whenOverridden,
         useMonochromeSnapshot: Bool = true,
@@ -131,7 +165,11 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
         
     }
     
-    // SnapshotVerify
+    /// Snapshots the current view using the specified content size category to test Dynamic Type.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerify` function.
+    ///
+    /// - Parameter contentSizeCategory: The content size category to use in the snapshot
     public static func image(
         at contentSizeCategory: UIContentSizeCategory
     ) -> Snapshotting {
@@ -144,8 +182,9 @@ extension Snapshotting where Value == UIViewController, Format == UIImage {
         
     }
     
-    // SnapshotVerifyWithInvertedColors
-    /// Snapshots the `view` simulating the way it will appear with Smart Invert Colors enabled.
+    /// Snapshots the current view simulating the way it will appear with Smart Invert Colors enabled.
+    ///
+    /// Matches functionality of CashApp's `SnapshotVerifyWithInvertedColors` function.
     @available(iOS 11, *)
     public static var imageWithSmartInvert: Snapshotting {
         Snapshotting<UIView, UIImage>.imageWithSmartInvert.pullback { viewController in
