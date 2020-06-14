@@ -1,6 +1,6 @@
 # AccessibilitySnapshotPointfree
 
-Accessibility snapshots makes it simpel to add regreession tests for accessibility in UIKit.
+Accessibility snapshots makes it simple to add regreession tests for accessibility in UIKit.
 
 ## Getting Started
 
