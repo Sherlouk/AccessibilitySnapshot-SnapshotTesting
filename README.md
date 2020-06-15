@@ -1,4 +1,4 @@
-# AccessibilitySnapshotPointfree
+# AccessibilitySnapshot+SnapshotTesting
 
 Accessibility snapshots makes it simple to add regreession tests for accessibility in UIKit.
 
@@ -13,7 +13,7 @@ Before setting up accessibility snapshot tests, make sure your project is set up
 Install with [CocoaPods](https://cocoapods.org) by adding the following to your `Podfile`:
 
 ```ruby
-pod 'AccessibilitySnapshotPointfree'
+pod 'AccessibilitySnapshot+SnapshotTesting'
 ```
 
 ## Usage
