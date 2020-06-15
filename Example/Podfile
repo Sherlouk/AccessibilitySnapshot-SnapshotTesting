@@ -1,7 +1,7 @@
 use_frameworks!
 use_modular_headers!
 platform :ios, '10.0'
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
 
 target 'AccessibilitySnapshotDemo' do
 	pod 'Paralayout', '~> 0.9'
