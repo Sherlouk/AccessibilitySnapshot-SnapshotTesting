@@ -1,3 +1,10 @@
+# :warning: Moved to [cashapp/AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot) :warning:
+
+This repository is no longer maintained as the code has been merged into the official AccessibilitySnapshot snapshot and is being regularly maintained by the core team (and myself). We recommend you update all references to the new version.
+
+---
+---
+
 # AccessibilitySnapshot+SnapshotTesting
 
 Accessibility snapshots makes it simple to add regreession tests for accessibility in UIKit.
